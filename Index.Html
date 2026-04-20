@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClearCraft Acrylic — Premium Transparent Products</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6f9;
+  --white:#ffffff;
+  --navy:#0d1b2a;
+  --navy2:#1a2e42;
+  --teal:#0891b2;
+  --teal-lt:#e0f2fe;
+  --teal-dk:#0e7490;
+  --accent:#06b6d4;
+  --glass-bg:rgba(255,255,255,0.7);
+  --glass-border:rgba(8,145,178,0.18);
+  --text:#0d1b2a;
+  --text2:#4a5568;
+  --text3:#94a3b8;
+  --border:#e2e8f0;
+  --border2:#cbd5e1;
+  --green:#16a34a;
+  --green-bg:#dcfce7;
+  --red:#dc2626;
+  --red-bg:#fee2e2;
+  --shadow:0 1px 3px rgba(0,0,0,0.08);
+  --shadow2:0 4px 20px rgba(8,145,178,0.12);
+  --shadow3:0 8px 32px rgba(8,145,178,0.18);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.6;}
+button{cursor:pointer;font-family:'DM Sans',sans-serif;}
+img{display:block;}
+
+/* ── HEADER ── */
+.hdr{background:var(--navy);position:sticky;top:0;z-index:300;box-shadow:0 2px 16px rgba(0,0,0,.25);}
+.hdr-in{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:11px 20px;}
+.logo-btn{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;}
+.logo-main{font-family:'DM Serif Display',serif;font-size:21px;color:#fff;letter-spacing:-.3px;line-height:1;}
+.logo-main span{color:var(--accent);}
+.logo-sub{font-size:10px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-top:1px;}
+.srch{flex:1;max-width:560px;display:flex;border-radius:6px;overflow:hidden;border:2px solid var(--accent);}
+.srch input{flex:1;border:none;outline:none;padding:9px 14px;font-size:14px;font-family:'DM Sans',sans-serif;background:#fff;color:var(--text);}
+.srch-btn{background:var(--accent);border:none;padding:0 18px;font-size:17px;color:#fff;}
+.srch-btn:hover{background:var(--teal-dk);}
+.hdr-acts{display:flex;align-items:center;gap:4px;margin-left:auto;}
+.hbtn{background:none;border:none;color:#fff;padding:7px 11px;border-radius:5px;display:flex;flex-direction:column;align-items:center;gap:1px;transition:background .15s;position:relative;font-size:12px;}
+.hbtn:hover{background:rgba(255,255,255,.1);}
+.hbtn .t{font-size:11px;color:#94a3b8;}
+.hbtn .b{font-size:13px;font-weight:600;white-space:nowrap;}
+.cart-ico{font-size:24px;position:relative;}
+.cbadge{position:absolute;top:-3px;right:-5px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;min-width:17px;height:17px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 3px;}
+.hdr-nav{background:var(--navy2);border-top:1px solid rgba(255,255,255,.07);}
+.nav-in{max-width:1280px;margin:0 auto;display:flex;overflow-x:auto;padding:0 20px;}
+.nav-in::-webkit-scrollbar{display:none;}
+.nvl{color:#94a3b8;font-size:13px;padding:9px 13px;white-space:nowrap;border:none;background:none;font-family:'DM Sans',sans-serif;border-bottom:2px solid transparent;transition:all .15s;}
+.nvl:hover,.nvl.active{color:#fff;border-bottom-color:var(--accent);}
+
+/* ── PAGES ── */
+.page{display:none;}
+.page.active{display:block;}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,#0c2340 45%,#0e3a5e 100%);
+  padding:72px 24px;text-align:center;position:relative;overflow:hidden;
+}
+.hero-rings{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(6,182,212,.12);}
+.ring1{width:400px;height:400px;}
+.ring2{width:600px;height:600px;}
+.ring3{width:800px;height:800px;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,var(--bg),transparent);}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:var(--accent);font-size:11px;font-weight:600;padding:5px 14px;border-radius:50px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:20px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,4.5vw,52px);color:#fff;margin-bottom:14px;line-height:1.15;}
+.hero h1 span{color:var(--accent);}
+.hero p{font-size:16px;color:#94a3b8;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-p{background:var(--accent);color:#fff;padding:12px 28px;border-radius:6px;border:none;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;transition:all .2s;}
+.btn-p:hover{background:var(--teal-dk);transform:translateY(-1px);box-shadow:0 6px 20px rgba(6,182,212,.35);}
+.btn-g{background:transparent;color:#fff;padding:12px 28px;border-radius:6px;border:1.5px solid rgba(255,255,255,.25);font-size:14px;font-weight:500;font-family:'DM Sans',sans-serif;transition:all .2s;}
+.btn-g:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.hero-stats{display:flex;justify-content:center;gap:44px;margin-top:40px;flex-wrap:wrap;position:relative;z-index:1;}
+.hstat .n{font-family:'DM Serif Display',serif;font-size:26px;color:var(--accent);}
+.hstat .l{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:1px;}
+
+/* ── FEATURES STRIP ── */
+.features{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.feat-in{max-width:1280px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:12px;}
+.feat{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:var(--text2);}
+.feat-ico{font-size:20px;}
+
+/* ── SECTION ── */
+.sec{max-width:1280px;margin:0 auto;padding:28px 20px;}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;border-bottom:2px solid var(--teal-lt);padding-bottom:11px;}
+.sec-ttl{font-size:18px;font-weight:700;}
+.sec-ttl span{color:var(--teal);}
+.sec-lnk{font-size:13px;color:var(--teal);font-weight:600;border:none;background:none;font-family:'DM Sans',sans-serif;cursor:pointer;}
+.sec-lnk:hover{text-decoration:underline;}
+
+/* ── CATS ── */
+.cats{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;}
+.cats::-webkit-scrollbar{height:4px;}
+.cats::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+.cat{display:flex;flex-direction:column;align-items:center;gap:6px;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:14px 18px;cursor:pointer;transition:all .15s;white-space:nowrap;min-width:100px;font-family:'DM Sans',sans-serif;}
+.cat:hover{box-shadow:var(--shadow2);border-color:var(--accent);}
+.cat.on{background:var(--navy);color:#fff;border-color:var(--navy);}
+.cat .ci{font-size:24px;}
+.cat .cn{font-size:12px;font-weight:600;}
+.cat .cc{font-size:11px;color:var(--text3);}
+.cat.on .cc{color:#64748b;}
+
+/* ── FILTER ── */
+.frow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+.fsel{padding:7px 11px;border:1.5px solid var(--border);border-radius:6px;font-size:13px;font-family:'DM Sans',sans-serif;background:#fff;outline:none;cursor:pointer;color:var(--text);}
+.fsel:focus{border-color:var(--accent);}
+.rcnt{font-size:13px;color:var(--text3);margin-left:auto;}
+
+/* ── PRODUCT GRID ── */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
+
+/* Glass card effect for acrylic store */
+.pcard{
+  background:var(--white);
+  border:1px solid var(--glass-border);
+  border-radius:12px;overflow:hidden;position:relative;
+  transition:box-shadow .2s,transform .2s;
+}
+.pcard:hover{box-shadow:var(--shadow3);transform:translateY(-3px);}
+.pcard-img-wrap{position:relative;overflow:hidden;background:linear-gradient(135deg,#e0f2fe,#f0f9ff);}
+.pcard-img{width:100%;height:200px;object-fit:contain;padding:12px;transition:transform .3s;}
+.pcard:hover .pcard-img{transform:scale(1.05);}
+.bfeat{position:absolute;top:8px;left:8px;background:var(--teal);color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.5px;}
+.boff{position:absolute;top:8px;right:8px;background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:50px;}
+.wbtn{position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,.9);border:1px solid var(--border);border-radius:50%;width:32px;height:32px;font-size:15px;box-shadow:var(--shadow);transition:all .15s;display:flex;align-items:center;justify-content:center;}
+.wbtn:hover{box-shadow:var(--shadow2);transform:scale(1.1);}
+.wbtn.on{color:var(--red);}
+.pbody{padding:13px 14px;}
+.pcat-tag{display:inline-block;background:var(--teal-lt);color:var(--teal-dk);font-size:10px;font-weight:700;padding:2px 8px;border-radius:50px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;}
+.pname{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:4px;height:37px;overflow:hidden;}
+.psize{font-size:11px;color:var(--text3);margin-bottom:7px;}
+.prat{display:flex;align-items:center;gap:5px;margin-bottom:8px;}
+.sbox{background:var(--green);color:#fff;font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;display:inline-flex;align-items:center;gap:2px;}
+.rcnt2{font-size:11px;color:var(--text3);}
+.ppr{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.pfin{font-size:16px;font-weight:700;color:var(--navy);}
+.por{font-size:12px;color:var(--text3);text-decoration:line-through;}
+.psave{font-size:11px;color:var(--green);font-weight:600;}
+.pacts{display:flex;gap:6px;}
+.acart{flex:1;background:var(--navy);color:#fff;border:none;padding:8px;border-radius:6px;font-size:12px;font-weight:600;font-family:'DM Sans',sans-serif;transition:background .15s;}
+.acart:hover{background:var(--teal-dk);}
+.aview{background:var(--accent);color:#fff;border:none;padding:8px 11px;border-radius:6px;font-size:12px;font-family:'DM Sans',sans-serif;transition:all .15s;font-weight:700;}
+.aview:hover{background:var(--teal-dk);}
+
+/* ── CART ── */
+.cart-lay{display:grid;grid-template-columns:1fr 310px;gap:16px;align-items:start;}
+@media(max-width:860px){.cart-lay{grid-template-columns:1fr;}}
+.cbox{background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:12px;}
+.cbox-hd{padding:14px 16px;border-bottom:1px solid var(--border);font-size:15px;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.citem{display:flex;gap:14px;padding:14px 16px;border-bottom:1px solid var(--border);align-items:flex-start;}
+.citem:last-child{border-bottom:none;}
+.cimg{width:80px;height:80px;object-fit:contain;border-radius:8px;background:linear-gradient(135deg,#e0f2fe,#f0f9ff);flex-shrink:0;padding:6px;}
+.cinf{flex:1;}
+.cname{font-size:14px;font-weight:600;margin-bottom:2px;}
+.ccat{font-size:11px;color:var(--text3);margin-bottom:5px;}
+.cprice{font-size:15px;font-weight:700;margin-bottom:8px;color:var(--navy);}
+.corig{font-size:12px;color:var(--text3);text-decoration:line-through;margin-left:5px;}
+.qrow{display:inline-flex;border:1.5px solid var(--border);border-radius:6px;overflow:hidden;}
+.qbtn{width:30px;height:30px;background:#f8fafc;border:none;font-size:16px;font-family:'DM Sans',sans-serif;}
+.qbtn:hover{background:var(--teal-lt);}
+.qn{width:36px;text-align:center;font-weight:700;font-size:14px;border-left:1px solid var(--border);border-right:1px solid var(--border);line-height:30px;}
+.delbtn{background:none;border:none;color:var(--red);font-size:12px;font-weight:500;font-family:'DM Sans',sans-serif;margin-left:10px;}
+.delbtn:hover{text-decoration:underline;}
+.ctot{font-size:15px;font-weight:700;white-space:nowrap;color:var(--navy);}
+.sum{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;position:sticky;top:74px;}
+.sum h3{font-size:12px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px;border-bottom:1px solid var(--border);padding-bottom:10px;}
+.srow{display:flex;justify-content:space-between;padding:5px 0;font-size:14px;}
+.srow.g{color:var(--green);font-weight:600;}
+.srow.tot{border-top:1px solid var(--border);margin-top:5px;padding-top:11px;font-size:16px;font-weight:700;}
+.ckbtn{width:100%;background:var(--navy);color:#fff;border:none;padding:13px;border-radius:8px;margin-top:14px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;transition:background .2s;}
+.ckbtn:hover{background:var(--teal-dk);}
+.snote{text-align:center;font-size:11px;color:var(--text3);margin-top:9px;}
+
+/* ── DETAIL ── */
+.det-wrap{max-width:1280px;margin:0 auto;padding:22px 20px;}
+.bread{font-size:12px;color:var(--text3);margin-bottom:18px;}
+.bread span{color:var(--teal);cursor:pointer;}
+.bread span:hover{text-decoration:underline;}
+.det-grid{display:grid;grid-template-columns:420px 1fr;gap:28px;}
+@media(max-width:768px){.det-grid{grid-template-columns:1fr;}}
+.det-img-box{background:linear-gradient(135deg,#e0f2fe,#f0f9ff);border:1px solid var(--glass-border);border-radius:12px;padding:28px;display:flex;align-items:center;justify-content:center;position:sticky;top:74px;height:fit-content;}
+.det-img{width:100%;max-height:360px;object-fit:contain;}
+.det-info{}
+.det-cattag{display:inline-block;background:var(--teal-lt);color:var(--teal-dk);font-size:11px;font-weight:700;padding:3px 10px;border-radius:50px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+.det-name{font-family:'DM Serif Display',serif;font-size:24px;color:var(--navy);margin-bottom:10px;line-height:1.3;}
+.det-rat{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);}
+.det-fin{font-size:28px;font-weight:700;color:var(--navy);margin-bottom:3px;}
+.det-mrp{font-size:13px;color:var(--text3);margin-bottom:3px;}
+.det-sav{font-size:14px;color:var(--green);font-weight:600;margin-bottom:16px;}
+/* specs table in detail */
+.det-specs{background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:16px;}
+.det-specs h4{font-size:13px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;}
+.spectable{width:100%;border-collapse:collapse;font-size:13px;}
+.spectable tr:nth-child(odd) td{background:rgba(8,145,178,.04);}
+.spectable td{padding:8px 10px;border:1px solid var(--border);}
+.spectable td:first-child{font-weight:600;width:140px;color:var(--text2);}
+.det-desc-box{background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:16px;}
+.det-desc-box h4{font-size:14px;font-weight:700;margin-bottom:8px;border-bottom:1px solid var(--border);padding-bottom:7px;}
+.det-desc-box p{font-size:14px;color:var(--text2);line-height:1.8;}
+.det-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+.dbt{flex:1;min-width:140px;border:none;padding:13px;border-radius:8px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;transition:all .2s;}
+.dbt.buy{background:var(--accent);color:#fff;}
+.dbt.buy:hover{background:var(--teal-dk);}
+.dbt.cart2{background:var(--navy);color:#fff;}
+.dbt.cart2:hover{background:#0d2a40;}
+.dbt.wish2{background:#fff;color:var(--text);border:1.5px solid var(--border);}
+.dbt.wish2:hover{border-color:var(--teal);color:var(--teal);}
+
+/* ── AUTH ── */
+.auth-wrap{min-height:calc(100vh - 200px);display:flex;align-items:center;justify-content:center;padding:24px;}
+.auth-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;width:100%;max-width:400px;box-shadow:var(--shadow2);}
+.auth-logo{text-align:center;margin-bottom:18px;}
+.auth-ttl{font-size:20px;font-weight:700;margin-bottom:5px;}
+.auth-sub{font-size:13px;color:var(--text3);margin-bottom:20px;}
+.fgrp{margin-bottom:13px;}
+.flbl{display:block;font-size:12px;font-weight:600;color:var(--text2);margin-bottom:4px;}
+.finp{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .15s;color:var(--text);}
+.finp:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(6,182,212,.1);}
+.fsub{width:100%;background:var(--navy);color:#fff;padding:11px;border:none;border-radius:7px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;transition:background .2s;margin-top:4px;}
+.fsub:hover{background:var(--teal-dk);}
+.auth-sw{text-align:center;font-size:13px;color:var(--text3);margin-top:13px;}
+.auth-sw a{color:var(--teal);font-weight:600;cursor:pointer;}
+.auth-sw a:hover{text-decoration:underline;}
+.demobox{background:#f0f9ff;border:1px solid #bae6fd;border-radius:6px;padding:10px 12px;margin-top:14px;font-size:12px;color:#0c4a6e;}
+.demobox strong{display:block;margin-bottom:3px;}
+
+/* ── ADMIN PANEL ── */
+.admin-layout{display:grid;grid-template-columns:220px 1fr;gap:0;min-height:calc(100vh - 110px);}
+.admin-sidebar{background:var(--navy);padding:20px 0;}
+.admin-sidebar h3{font-size:11px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:1px;padding:0 18px;margin-bottom:8px;}
+.sdbtn{display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;color:#94a3b8;padding:11px 18px;font-size:13px;font-weight:500;font-family:'DM Sans',sans-serif;text-align:left;border-left:3px solid transparent;transition:all .15s;}
+.sdbtn:hover{background:rgba(255,255,255,.06);color:#fff;}
+.sdbtn.on{background:rgba(6,182,212,.12);color:var(--accent);border-left-color:var(--accent);}
+.sdbtn .ico{font-size:17px;width:22px;}
+.admin-main{background:var(--bg);padding:24px;}
+
+/* ── PRODUCT FORM (the key feature) ── */
+.pform-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.pform-hd{background:var(--navy);padding:18px 22px;display:flex;align-items:center;justify-content:space-between;}
+.pform-hd h2{font-size:16px;font-weight:700;color:#fff;}
+.pform-hd span{font-size:12px;color:#64748b;}
+.pform-body{padding:22px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-grid.full{grid-template-columns:1fr;}
+.fgrp2{margin-bottom:0;}
+.flbl2{display:block;font-size:12px;font-weight:600;color:var(--text2);margin-bottom:5px;}
+.flbl2 em{color:var(--red);font-style:normal;}
+.finp2{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .15s;color:var(--text);background:#fff;}
+.finp2:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(6,182,212,.1);}
+textarea.finp2{resize:vertical;min-height:90px;}
+select.finp2{cursor:pointer;}
+.form-section{margin-bottom:20px;}
+.form-section-ttl{font-size:12px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px;}
+.form-section-ttl span{font-size:16px;}
+.sizes-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.size-chip{display:inline-flex;align-items:center;gap:5px;background:var(--teal-lt);color:var(--teal-dk);padding:4px 10px;border-radius:50px;font-size:12px;font-weight:600;}
+.size-chip button{background:none;border:none;cursor:pointer;color:var(--red);font-size:14px;line-height:1;padding:0;display:flex;}
+.add-size-row{display:flex;gap:7px;align-items:center;flex-wrap:wrap;}
+.small-inp{padding:7px 10px;border:1.5px solid var(--border);border-radius:6px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:110px;}
+.small-inp:focus{border-color:var(--accent);}
+.add-btn{background:var(--teal-lt);color:var(--teal-dk);border:none;padding:7px 14px;border-radius:6px;font-size:12px;font-weight:700;font-family:'DM Sans',sans-serif;}
+.add-btn:hover{background:#bae6fd;}
+.img-url-wrap{display:flex;gap:8px;}
+.img-url-wrap input{flex:1;}
+.img-preview{width:70px;height:70px;border-radius:8px;background:linear-gradient(135deg,#e0f2fe,#f0f9ff);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:28px;overflow:hidden;flex-shrink:0;}
+.img-preview img{width:100%;height:100%;object-fit:cover;}
+.toggle-row{display:flex;align-items:center;gap:10px;}
+.toggle{position:relative;width:44px;height:24px;}
+.toggle input{opacity:0;width:0;height:0;}
+.toggle-slider{position:absolute;inset:0;background:#cbd5e1;border-radius:24px;cursor:pointer;transition:.2s;}
+.toggle-slider:before{content:'';position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.2s;}
+.toggle input:checked+.toggle-slider{background:var(--accent);}
+.toggle input:checked+.toggle-slider:before{transform:translateX(20px);}
+.toggle-lbl{font-size:13px;font-weight:500;color:var(--text2);}
+.form-actions{display:flex;gap:10px;justify-content:flex-end;padding-top:16px;border-top:1px solid var(--border);margin-top:4px;}
+.save-btn{background:var(--navy);color:#fff;border:none;padding:11px 28px;border-radius:7px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;transition:background .2s;}
+.save-btn:hover{background:var(--teal-dk);}
+.cancel-btn{background:#fff;color:var(--text2);border:1.5px solid var(--border);padding:11px 22px;border-radius:7px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;}
+.cancel-btn:hover{border-color:var(--text2);}
+
+/* ── ADMIN PRODUCTS TABLE ── */
+.atab{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.atab-hd{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.atab-hd h3{font-size:15px;font-weight:700;}
+.add-prod-btn{background:var(--accent);color:#fff;border:none;padding:9px 18px;border-radius:7px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;}
+.add-prod-btn:hover{background:var(--teal-dk);}
+.atbl{width:100%;border-collapse:collapse;font-size:13px;}
+.atbl th{text-align:left;padding:10px 14px;font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);background:#f8fafc;}
+.atbl td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.atbl tr:last-child td{border-bottom:none;}
+.atbl tr:hover td{background:#f8fafc;}
+.stk-ok{display:inline-block;padding:2px 8px;border-radius:50px;font-size:11px;font-weight:700;background:var(--green-bg);color:var(--green);}
+.stk-lo{display:inline-block;padding:2px 8px;border-radius:50px;font-size:11px;font-weight:700;background:#fff7ed;color:#ea580c;}
+.tbl-action{background:none;border:1px solid var(--border);padding:4px 10px;border-radius:5px;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;margin-right:4px;}
+.tbl-action:hover{background:var(--teal-lt);border-color:var(--accent);color:var(--teal-dk);}
+.tbl-action.del{color:var(--red);}
+.tbl-action.del:hover{background:var(--red-bg);border-color:var(--red);}
+
+/* ── EMPTY STATE ── */
+.empty{text-align:center;padding:52px 24px;}
+.empty .ei{font-size:50px;margin-bottom:14px;}
+.empty h3{font-size:17px;font-weight:700;margin-bottom:7px;}
+.empty p{font-size:13px;color:var(--text3);margin-bottom:18px;}
+
+/* ── TOAST ── */
+#toasts{position:fixed;bottom:22px;right:22px;z-index:9999;display:flex;flex-direction:column;gap:7px;}
+.toast{background:#1e293b;color:#fff;padding:11px 16px;border-radius:8px;font-size:13px;font-weight:500;max-width:300px;box-shadow:0 4px 20px rgba(0,0,0,.2);border-left:4px solid var(--accent);animation:tin .3s ease;}
+.toast.ok{border-left-color:var(--green);}
+.toast.err{border-left-color:var(--red);}
+@keyframes tin{from{transform:translateX(110%);opacity:0;}to{transform:translateX(0);opacity:1;}}
+
+/* ── ORDER SUCCESS ── */
+.ordok{text-align:center;padding:52px 24px;}
+.ck{font-size:68px;animation:pop .5s ease;display:block;margin-bottom:14px;}
+@keyframes pop{0%{transform:scale(0);}70%{transform:scale(1.15);}100%{transform:scale(1);}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .hdr-in{flex-wrap:wrap;gap:8px;}
+  .srch{order:3;flex:1 1 100%;}
+  .hdr-acts{margin-left:0;}
+  .hero{padding:40px 16px;}
+  .admin-layout{grid-template-columns:1fr;}
+  .admin-sidebar{display:flex;overflow-x:auto;padding:0;}
+  .form-grid{grid-template-columns:1fr;}
+  .det-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ======== HEADER ======== -->
+<header>
+  <div class="hdr">
+    <div class="hdr-in">
+      <button class="logo-btn" onclick="goHome()">
+        <div class="logo-main">RD<span> Shivam</span></div>
+        <div class="logo-sub">Acrylic Factory Store</div>
+      </button>
+      <div class="srch">
+        <input type="text" id="srchInp" placeholder="Search acrylic boxes, frames, displays..." oninput="liveSearch(this.value)">
+        <button class="srch-btn" onclick="doSearch()">🔍</button>
+      </div>
+      <div class="hdr-acts">
+        <button class="hbtn" id="authBtn" onclick="showPage('auth')">
+          <span class="t">Hello, Sign in</span>
+          <span class="b">Account</span>
+        </button>
+        <button class="hbtn" onclick="showPage('wishlist')">
+          <span class="t">Saved</span>
+          <span class="b">♡ <span id="wCnt">0</span></span>
+        </button>
+        <button class="hbtn" onclick="showPage('cart')" style="flex-direction:row;gap:7px;align-items:center;">
+          <span class="cart-ico">🛒<span class="cbadge" id="cBadge">0</span></span>
+          <span class="b">Cart</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <nav class="hdr-nav">
+    <div class="nav-in">
+      <button class="nvl active" onclick="goHome();setNav(this)">Home</button>
+      <button class="nvl" onclick="filterCat('Acrylic Box');setNav(this)">Acrylic Boxes</button>
+      <button class="nvl" onclick="filterCat('Display Stand');setNav(this)">Display Stands</button>
+      <button class="nvl" onclick="filterCat('Photo Frame');setNav(this)">Photo Frames</button>
+      <button class="nvl" onclick="filterCat('Sign Board');setNav(this)">Sign Boards</button>
+      <button class="nvl" onclick="filterCat('Trophy');setNav(this)">Trophies</button>
+      <button class="nvl" onclick="filterCat('Custom');setNav(this)">Custom Orders</button>
+      <button class="nvl" id="adminNav" onclick="showPage('admin');setNav(this)" style="display:none">⚙ Admin Panel</button>
+    </div>
+  </nav>
+</header>
+
+<div id="toasts"></div>
+
+<!-- ======== HOME ======== -->
+<div id="home" class="page active">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-rings">
+      <div class="ring ring1"></div>
+      <div class="ring ring2"></div>
+      <div class="ring ring3"></div>
+    </div>
+    <div class="hero-badge">🏭 Direct from our Acrylic Factory</div>
+    <h1>Premium <span>Transparent</span><br>Acrylic Products</h1>
+    <p>Custom-crafted acrylic boxes, displays, frames, and more. Made-to-order with precision cutting and polished edges.</p>
+    <div class="hero-btns">
+      <button class="btn-p" onclick="document.getElementById('shopSec').scrollIntoView({behavior:'smooth'})">Shop Collection</button>
+      <button class="btn-g" onclick="filterCat('Custom')">Request Custom Order</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="n">500+</div><div class="l">Products Made</div></div>
+      <div class="hstat"><div class="n">Custom</div><div class="l">Sizes Available</div></div>
+      <div class="hstat"><div class="n">Factory</div><div class="l">Direct Price</div></div>
+      <div class="hstat"><div class="n">4.9★</div><div class="l">Avg Rating</div></div>
+    </div>
+  </div>
+
+  <!-- Features strip -->
+  <div class="features">
+    <div class="feat-in">
+      <div class="feat"><span class="feat-ico">✂️</span>Precision Laser Cutting</div>
+      <div class="feat"><span class="feat-ico">🔬</span>Premium Grade Acrylic</div>
+      <div class="feat"><span class="feat-ico">📐</span>Custom Sizes on Request</div>
+      <div class="feat"><span class="feat-ico">🚚</span>Pan India Delivery</div>
+      <div class="feat"><span class="feat-ico">🏭</span>Factory Direct Pricing</div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="sec">
+    <div class="sec-hd"><div class="sec-ttl">Browse by <span>Category</span></div></div>
+    <div class="cats" id="catsRow"></div>
+  </div>
+
+  <!-- Products -->
+  <div class="sec" id="shopSec">
+    <div class="sec-hd">
+      <div class="sec-ttl">Our <span>Products</span></div>
+      <button class="sec-lnk" onclick="showAllProds()">See all →</button>
+    </div>
+    <div class="frow">
+      <select class="fsel" onchange="applySort(this.value,'hGrid')">
+        <option value="">Sort: Default</option>
+        <option value="plo">Price: Low to High</option>
+        <option value="phi">Price: High to Low</option>
+        <option value="rat">Top Rated</option>
+        <option value="new">Newest First</option>
+      </select>
+      <span class="rcnt" id="hCnt"></span>
+    </div>
+    <div class="pgrid" id="hGrid"></div>
+  </div>
+</div>
+
+<!-- ======== PRODUCTS PAGE ======== -->
+<div id="products" class="page">
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ttl" id="pPageTitle">All <span>Products</span></div>
+      <button class="sec-lnk" onclick="goHome()">← Back</button>
+    </div>
+    <div class="frow">
+      <select class="fsel" onchange="applySort(this.value,'pGrid')">
+        <option value="">Sort: Default</option>
+        <option value="plo">Price: Low to High</option>
+        <option value="phi">Price: High to Low</option>
+        <option value="rat">Top Rated</option>
+        <option value="new">Newest First</option>
+      </select>
+      <span class="rcnt" id="pCnt"></span>
+    </div>
+    <div class="pgrid" id="pGrid"></div>
+  </div>
+</div>
+
+<!-- ======== DETAIL ======== -->
+<div id="detail" class="page">
+  <div class="det-wrap">
+    <div class="bread" id="detBread"></div>
+    <div class="det-grid" id="detContent"></div>
+  </div>
+</div>
+
+<!-- ======== CART ======== -->
+<div id="cart" class="page">
+  <div class="sec">
+    <h2 style="font-size:20px;font-weight:700;margin-bottom:16px">Shopping Cart</h2>
+    <div class="cart-lay">
+      <div id="cartContent"></div>
+      <div class="sum">
+        <h3>Order Summary</h3>
+        <div class="srow"><span>Price (<span id="sItems">0</span> items)</span><span id="sSub">₹0</span></div>
+        <div class="srow g"><span>Discount</span><span id="sDis">-₹0</span></div>
+        <div class="srow"><span>Delivery</span><span style="color:var(--green);font-weight:600">FREE</span></div>
+        <div class="srow tot"><span>Total</span><span id="sTot">₹0</span></div>
+        <button class="ckbtn" onclick="placeOrder()">Place Order</button>
+        <p class="snote" style="margin-top:10px">🔒 Secure payment · Easy returns</p>
+        <p class="snote" style="margin-top:4px">Custom size queries? Call us!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== WISHLIST ======== -->
+<div id="wishlist" class="page">
+  <div class="sec">
+    <div class="sec-hd"><div class="sec-ttl">My <span>Wishlist</span></div></div>
+    <div class="pgrid" id="wGrid"></div>
+  </div>
+</div>
+
+<!-- ======== AUTH ======== -->
+<div id="auth" class="page">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--navy)">Clear<span style="color:var(--accent)">Craft</span></div>
+        <div style="font-size:10px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px">Acrylic Factory Store</div>
+      </div>
+      <div id="loginPanel">
+        <div class="auth-ttl">Sign In</div>
+        <div class="auth-sub">Access your account and orders</div>
+        <div class="fgrp"><label class="flbl">Email address</label><input class="finp" type="email" id="lemail" placeholder="you@example.com" value="user@test.com"></div>
+        <div class="fgrp"><label class="flbl">Password</label><input class="finp" type="password" id="lpass" placeholder="Password" value="user123"></div>
+        <button class="fsub" onclick="doLogin()">Sign In</button>
+        <div class="auth-sw">New here? <a onclick="toggleAuth()">Create account</a></div>
+        <div class="demobox"><strong>🔑 Demo Credentials</strong>User: user@test.com / user123<br>Admin: admin@clearcraft.com / admin123</div>
+      </div>
+      <div id="regPanel" style="display:none">
+        <div class="auth-ttl">Create Account</div>
+        <div class="auth-sub">Start shopping premium acrylic products</div>
+        <div class="fgrp"><label class="flbl">Full name</label><input class="finp" type="text" id="rname" placeholder="Your name"></div>
+        <div class="fgrp"><label class="flbl">Email address</label><input class="finp" type="email" id="remail" placeholder="you@example.com"></div>
+        <div class="fgrp"><label class="flbl">Password</label><input class="finp" type="password" id="rpass" placeholder="Min. 6 characters"></div>
+        <button class="fsub" onclick="doRegister()">Create Account</button>
+        <div class="auth-sw">Already have account? <a onclick="toggleAuth()">Sign in</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== ADMIN PANEL ======== -->
+<div id="admin" class="page">
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <div class="admin-sidebar">
+      <h3>Admin Menu</h3>
+      <button class="sdbtn on" onclick="adminTab('dashboard',this)"><span class="ico">📊</span>Dashboard</button>
+      <button class="sdbtn" onclick="adminTab('addProduct',this)"><span class="ico">➕</span>Add New Product</button>
+      <button class="sdbtn" onclick="adminTab('manageProducts',this)"><span class="ico">📦</span>Manage Products</button>
+      <button class="sdbtn" onclick="adminTab('orders',this)"><span class="ico">🛍</span>Orders</button>
+      <div style="height:1px;background:rgba(255,255,255,.08);margin:14px 0;"></div>
+      <button class="sdbtn" onclick="goHome();setNav(document.querySelector('.nvl'))"><span class="ico">🏪</span>View Store</button>
+      <button class="sdbtn" onclick="doLogout()"><span class="ico">🚪</span>Sign Out</button>
+    </div>
+
+    <!-- Main content (tabs) -->
+    <div class="admin-main">
+
+      <!-- DASHBOARD TAB -->
+      <div id="tab-dashboard">
+        <h2 style="font-size:18px;font-weight:700;margin-bottom:16px">Dashboard</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:22px">
+          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:center;gap:12px">
+            <div style="width:46px;height:46px;border-radius:8px;background:var(--teal-lt);display:flex;align-items:center;justify-content:center;font-size:21px">📦</div>
+            <div><div style="font-size:22px;font-weight:700" id="ds1">0</div><div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px">Products</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:center;gap:12px">
+            <div style="width:46px;height:46px;border-radius:8px;background:var(--green-bg);display:flex;align-items:center;justify-content:center;font-size:21px">🛒</div>
+            <div><div style="font-size:22px;font-weight:700" id="ds2">0</div><div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px">Orders</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:center;gap:12px">
+            <div style="width:46px;height:46px;border-radius:8px;background:#fff7ed;display:flex;align-items:center;justify-content:center;font-size:21px">💰</div>
+            <div><div style="font-size:22px;font-weight:700" id="ds3">₹0</div><div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px">Revenue</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:center;gap:12px">
+            <div style="width:46px;height:46px;border-radius:8px;background:#fce7f3;display:flex;align-items:center;justify-content:center;font-size:21px">♡</div>
+            <div><div style="font-size:22px;font-weight:700" id="ds4">0</div><div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px">Wishlisted</div></div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;">
+          <div style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--text2)">Quick Actions</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="add-prod-btn" onclick="adminTab('addProduct',document.querySelectorAll('.sdbtn')[1])">➕ Add New Product</button>
+            <button class="add-prod-btn" style="background:var(--navy)" onclick="adminTab('manageProducts',document.querySelectorAll('.sdbtn')[2])">📦 Manage Products</button>
+            <button class="add-prod-btn" style="background:#64748b" onclick="adminTab('orders',document.querySelectorAll('.sdbtn')[3])">🛍 View Orders</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD PRODUCT TAB -->
+      <div id="tab-addProduct" style="display:none">
+        <h2 style="font-size:18px;font-weight:700;margin-bottom:16px">Add New Product</h2>
+        <div class="pform-card">
+          <div class="pform-hd">
+            <h2>Product Listing Form</h2>
+            <span>Fill all required fields marked with *</span>
+          </div>
+          <div class="pform-body">
+
+            <!-- Basic Info -->
+            <div class="form-section">
+              <div class="form-section-ttl"><span>📝</span> Basic Information</div>
+              <div class="form-grid" style="margin-bottom:14px">
+                <div class="fgrp2">
+                  <label class="flbl2">Product Name <em>*</em></label>
+                  <input class="finp2" type="text" id="f-name" placeholder="e.g. Clear Acrylic Storage Box">
+                </div>
+                <div class="fgrp2">
+                  <label class="flbl2">Category <em>*</em></label>
+                  <select class="finp2" id="f-cat">
+                    <option value="">Select category</option>
+                    <option>Acrylic Box</option>
+                    <option>Display Stand</option>
+                    <option>Photo Frame</option>
+                    <option>Sign Board</option>
+                    <option>Trophy</option>
+                    <option>Custom</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-grid full" style="margin-bottom:14px">
+                <div class="fgrp2">
+                  <label class="flbl2">Short Description <em>*</em></label>
+                  <textarea class="finp2" id="f-desc" placeholder="Describe the product — material, use case, key features, finish type..."></textarea>
+                </div>
+              </div>
+              <div class="form-grid" style="margin-bottom:0">
+                <div class="fgrp2">
+                  <label class="flbl2">Material</label>
+                  <select class="finp2" id="f-material">
+                    <option value="">Select material</option>
+                    <option>Clear Acrylic (Standard)</option>
+                    <option>Frosted Acrylic</option>
+                    <option>Coloured Acrylic</option>
+                    <option>Mirror Acrylic</option>
+                    <option>UV-Resistant Acrylic</option>
+                    <option>Cast Acrylic</option>
+                    <option>Extruded Acrylic</option>
+                  </select>
+                </div>
+                <div class="fgrp2">
+                  <label class="flbl2">Thickness (mm)</label>
+                  <select class="finp2" id="f-thick">
+                    <option value="">Select thickness</option>
+                    <option>2mm</option><option>3mm</option><option>4mm</option>
+                    <option>5mm</option><option>6mm</option><option>8mm</option>
+                    <option>10mm</option><option>12mm</option><option>Custom</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sizes -->
+            <div class="form-section">
+              <div class="form-section-ttl"><span>📐</span> Available Sizes</div>
+              <div id="sizesDisplay" class="sizes-row" style="margin-bottom:10px"></div>
+              <div class="add-size-row">
+                <input class="small-inp" type="text" id="sizeW" placeholder="Width (cm)">
+                <input class="small-inp" type="text" id="sizeH" placeholder="Height (cm)">
+                <input class="small-inp" type="text" id="sizeD" placeholder="Depth (cm)" style="width:100px">
+                <button class="add-btn" onclick="addSize()">+ Add Size</button>
+                <span style="font-size:12px;color:var(--text3)">W × H × D in cm</span>
+              </div>
+              <div style="margin-top:8px">
+                <label style="font-size:12px;color:var(--text3)">Or enter custom sizes as text:</label>
+                <input class="finp2" type="text" id="f-customSize" placeholder="e.g. 30×20×15 cm, 45×30×20 cm, Custom sizes available on request" style="margin-top:5px">
+              </div>
+            </div>
+
+            <!-- Pricing & Stock -->
+            <div class="form-section">
+              <div class="form-section-ttl"><span>💰</span> Pricing & Stock</div>
+              <div class="form-grid" style="margin-bottom:14px">
+                <div class="fgrp2">
+                  <label class="flbl2">MRP (₹) <em>*</em></label>
+                  <input class="finp2" type="number" id="f-mrp" placeholder="e.g. 1200">
+                </div>
+                <div class="fgrp2">
+                  <label class="flbl2">Sale Price (₹) <em>*</em></label>
+                  <input class="finp2" type="number" id="f-price" placeholder="e.g. 999">
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="fgrp2">
+                  <label class="flbl2">Stock Quantity <em>*</em></label>
+                  <input class="finp2" type="number" id="f-stock" placeholder="e.g. 50">
+                </div>
+                <div class="fgrp2">
+                  <label class="flbl2">Minimum Order Quantity</label>
+                  <input class="finp2" type="number" id="f-moq" placeholder="e.g. 1">
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="form-section">
+              <div class="form-section-ttl"><span>🖼</span> Product Image</div>
+              <div class="img-url-wrap">
+                <input class="finp2" type="text" id="f-img" placeholder="Paste image URL (e.g. https://...)" oninput="previewImg(this.value)">
+                <div class="img-preview" id="imgPreview">🔲</div>
+              </div>
+              <p style="font-size:11px;color:var(--text3);margin-top:7px">Tip: Use Unsplash, Google Drive public link, or any direct image URL.</p>
+            </div>
+
+            <!-- Additional Details -->
+            <div class="form-section">
+              <div class="form-section-ttl"><span>⚙️</span> Additional Details</div>
+              <div class="form-grid" style="margin-bottom:14px">
+                <div class="fgrp2">
+                  <label class="flbl2">Finish Type</label>
+                  <select class="finp2" id="f-finish">
+                    <option value="">Select finish</option>
+                    <option>Polished Edges</option>
+                    <option>Flame Polished</option>
+                    <option>Matte Finish</option>
+                    <option>Glossy Finish</option>
+                    <option>Diamond Edge Polish</option>
+                    <option>Raw Cut</option>
+                  </select>
+                </div>
+                <div class="fgrp2">
+                  <label class="flbl2">Lead Time</label>
+                  <select class="finp2" id="f-lead">
+                    <option value="">Select lead time</option>
+                    <option>Ready to Ship (1–2 days)</option>
+                    <option>3–5 Business Days</option>
+                    <option>5–7 Business Days</option>
+                    <option>7–10 Business Days (Custom)</option>
+                    <option>15+ Days (Bulk/Special)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-grid full" style="margin-bottom:14px">
+                <div class="fgrp2">
+                  <label class="flbl2">Use Cases / Applications</label>
+                  <input class="finp2" type="text" id="f-uses" placeholder="e.g. Jewelry storage, Display case, Gift box, Office organizer...">
+                </div>
+              </div>
+              <div class="form-grid full" style="margin-bottom:14px">
+                <div class="fgrp2">
+                  <label class="flbl2">Tags (comma separated)</label>
+                  <input class="finp2" type="text" id="f-tags" placeholder="e.g. transparent, box, clear, storage, custom">
+                </div>
+              </div>
+              <div style="display:flex;gap:24px;flex-wrap:wrap">
+                <div class="toggle-row">
+                  <label class="toggle"><input type="checkbox" id="f-featured"><span class="toggle-slider"></span></label>
+                  <span class="toggle-lbl">Mark as Featured Product</span>
+                </div>
+                <div class="toggle-row">
+                  <label class="toggle"><input type="checkbox" id="f-custom" checked><span class="toggle-slider"></span></label>
+                  <span class="toggle-lbl">Custom Size Available</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+              <button class="cancel-btn" onclick="clearForm()">Clear Form</button>
+              <button class="save-btn" onclick="saveProduct()">💾 Save & Publish Product</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MANAGE PRODUCTS TAB -->
+      <div id="tab-manageProducts" style="display:none">
+        <div class="atab">
+          <div class="atab-hd">
+            <h3>All Products</h3>
+            <button class="add-prod-btn" onclick="adminTab('addProduct',document.querySelectorAll('.sdbtn')[1])">➕ Add New</button>
+          </div>
+          <div style="overflow-x:auto">
+            <table class="atbl" id="adminTbl"></table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDERS TAB -->
+      <div id="tab-orders" style="display:none">
+        <div class="atab">
+          <div class="atab-hd"><h3>All Orders</h3></div>
+          <div id="adminOrd"></div>
+        </div>
+      </div>
+
+    </div><!-- /admin-main -->
+  </div><!-- /admin-layout -->
+</div>
+
+<!-- FOOTER -->
+<footer style="background:var(--navy);color:#94a3b8;margin-top:40px;padding:36px 20px 18px">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;margin-bottom:24px">
+    <div>
+      <div style="font-family:'DM Serif Display',serif;font-size:21px;color:#fff;margin-bottom:10px">Clear<span style="color:var(--accent)">Craft</span></div>
+      <div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#475569;margin-bottom:12px">Acrylic Factory Store</div>
+      <p style="font-size:13px;color:#64748b;line-height:1.8">Premium transparent acrylic products crafted with precision. Custom sizes, bulk orders welcome. Direct from our factory.</p>
+    </div>
+    <div>
+      <p style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#475569;margin-bottom:12px;font-weight:600">Products</p>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
+        <a onclick="filterCat('Acrylic Box')" style="cursor:pointer;color:#64748b">Acrylic Boxes</a>
+        <a onclick="filterCat('Display Stand')" style="cursor:pointer;color:#64748b">Display Stands</a>
+        <a onclick="filterCat('Photo Frame')" style="cursor:pointer;color:#64748b">Photo Frames</a>
+        <a onclick="filterCat('Trophy')" style="cursor:pointer;color:#64748b">Trophies</a>
+        <a onclick="filterCat('Custom')" style="cursor:pointer;color:#64748b">Custom Orders</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#475569;margin-bottom:12px;font-weight:600">Account</p>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
+        <a onclick="showPage('auth')" style="cursor:pointer;color:#64748b">Sign In / Register</a>
+        <a onclick="showPage('cart')" style="cursor:pointer;color:#64748b">My Cart</a>
+        <a onclick="showPage('wishlist')" style="cursor:pointer;color:#64748b">Wishlist</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#475569;margin-bottom:12px;font-weight:600">Contact</p>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:#64748b">
+        <span>📞 +91 98765 43210</span>
+        <span>✉ hello@clearcraft.in</span>
+        <span>📍 Your City, India</span>
+        <span>🕐 Mon–Sat, 9 AM – 6 PM</span>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid #1e293b;padding-top:14px;max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:12px;color:#334155">
+    <span>© 2024 ClearCraft Acrylic Store. All rights reserved.</span>
+    <span>Made with ♥ · Direct Factory Pricing</span>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   DEFAULTS — some sample products so the store isn't empty
+   ========================================================= */
+const DEFAULT_PRODS = [
+  {id:'dp1',name:'Clear Acrylic Storage Box with Lid',desc:'Premium transparent acrylic storage box with a secure-fitting lid. Perfect for jewelry, cosmetics, stationery, and display purposes. Polished edges for a clean professional look.',cat:'Acrylic Box',material:'Clear Acrylic (Standard)',thick:'5mm',sizes:['20×15×10 cm','30×20×15 cm','40×30×20 cm'],finish:'Polished Edges',lead:'Ready to Ship (1–2 days)',uses:'Jewelry, Cosmetics, Stationery, Display',moq:1,mrp:1200,price:899,stock:80,featured:true,customAvail:true,tags:['box','storage','clear','lid'],img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600',rat:4.8,rev:124,added:Date.now()-5},
+  {id:'dp2',name:'Acrylic Display Stand — Tiered Shelf',desc:'Elegant 3-tier transparent acrylic display stand for products, collectibles, or cosmetics. Slots are adjustable. Strong enough to hold up to 5 kg per shelf.',cat:'Display Stand',material:'Clear Acrylic (Standard)',thick:'6mm',sizes:['30×25×30 cm (3-tier)','40×30×35 cm (3-tier)'],finish:'Flame Polished',lead:'3–5 Business Days',uses:'Product display, Cosmetics, Collectibles, Shop counter',moq:1,mrp:2200,price:1799,stock:35,featured:true,customAvail:true,tags:['display','stand','shelf','tiered'],img:'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600',rat:4.7,rev:89,added:Date.now()-4},
+  {id:'dp3',name:'Acrylic Photo Frame — Borderless',desc:'Minimalist borderless acrylic photo frame. Crystal-clear acrylic sheet gives a floating effect to your photos and artwork. Available in A4, A3, and custom sizes.',cat:'Photo Frame',material:'Clear Acrylic (Standard)',thick:'3mm',sizes:['A4 (21×29.7 cm)','A3 (29.7×42 cm)','Custom size'],finish:'Diamond Edge Polish',lead:'3–5 Business Days',uses:'Photo display, Artwork, Certificates, Menu display',moq:1,mrp:650,price:449,stock:200,featured:false,customAvail:true,tags:['frame','photo','borderless','wall'],img:'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600',rat:4.6,rev:211,added:Date.now()-3},
+  {id:'dp4',name:'Custom Acrylic Name Sign Board',desc:'Laser-engraved or printed acrylic sign board for offices, shops, and events. Choose from clear, frosted, or coloured acrylic. UV-stable inks that will not fade.',cat:'Sign Board',material:'Frosted Acrylic',thick:'4mm',sizes:['30×15 cm','45×20 cm','60×30 cm','Custom'],finish:'Matte Finish',lead:'5–7 Business Days',uses:'Office signage, Shop front, Event decor, Nameplates',moq:1,mrp:1800,price:1399,stock:50,featured:true,customAvail:true,tags:['sign','board','name','office','custom'],img:'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600',rat:4.9,rev:67,added:Date.now()-2},
+  {id:'dp5',name:'Acrylic Crystal Trophy',desc:'Premium crystal-clear acrylic trophy with laser-engraved design. A modern alternative to glass trophies — lighter, shatter-resistant, and equally elegant. Corporate and sports awards.',cat:'Trophy',material:'Cast Acrylic',thick:'10mm',sizes:['15 cm height','20 cm height','25 cm height','Custom'],finish:'Diamond Edge Polish',lead:'7–10 Business Days (Custom)',uses:'Corporate awards, Sports trophies, Achievement recognition',moq:1,mrp:1500,price:1199,stock:30,featured:false,customAvail:true,tags:['trophy','award','crystal','corporate'],img:'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600',rat:4.8,rev:45,added:Date.now()-1},
+  {id:'dp6',name:'Acrylic Donation Box with Lock',desc:'Secure donation/suggestion/ballot box made from 5mm clear acrylic. Comes with a lock and two keys. Ideal for charities, offices, temples, and event venues.',cat:'Acrylic Box',material:'Clear Acrylic (Standard)',thick:'5mm',sizes:['20×15×15 cm','30×20×20 cm'],finish:'Polished Edges',lead:'3–5 Business Days',uses:'Donation, Suggestion box, Ballot, Events',moq:1,mrp:950,price:749,stock:60,featured:false,customAvail:false,tags:['donation','box','lock','ballot'],img:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600',rat:4.5,rev:38,added:Date.now()}
+];
+
+/* =========================================================
+   STATE
+   ========================================================= */
+let PRODS  = JSON.parse(localStorage.getItem('cc-prods') || JSON.stringify(DEFAULT_PRODS));
+let cart   = JSON.parse(localStorage.getItem('cc-cart')  || '[]');
+let wlist  = JSON.parse(localStorage.getItem('cc-wish')  || '[]');
+let orders = JSON.parse(localStorage.getItem('cc-ords')  || '[]');
+let me     = JSON.parse(localStorage.getItem('cc-me')    || 'null');
+let aCat   = '';
+let editId = null;
+let sizes  = [];  // temp sizes array for form
+
+const USERS = [
+  {email:'user@test.com',pass:'user123',name:'Test User',role:'user'},
+  {email:'admin@clearcraft.com',pass:'admin123',name:'ClearCraft Admin',role:'admin'}
+];
+
+/* =========================================================
+   BOOT
+   ========================================================= */
+(function(){
+  renderCats();
+  renderGrid(PRODS.filter(p=>p.featured),'hGrid');
+  document.getElementById('hCnt').textContent = PRODS.filter(p=>p.featured).length + ' products';
+  updateBadges();
+  syncAuth();
+})();
+
+/* =========================================================
+   NAV
+   ========================================================= */
+function showPage(pg){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(pg)?.classList.add('active');
+  window.scrollTo({top:0});
+  if(pg==='cart')     renderCart();
+  if(pg==='wishlist') renderWishlist();
+  if(pg==='admin'){
+    if(!me||me.role!=='admin'){toast('Admin access required.','err');showPage('auth');return;}
+    refreshDashboard();
+    renderAdminProducts();
+    renderAdminOrders();
+  }
+}
+function goHome(){showPage('home');}
+function setNav(el){document.querySelectorAll('.nvl').forEach(n=>n.classList.remove('active'));el?.classList.add('active');}
+
+/* =========================================================
+   ADMIN TAB SWITCHER
+   ========================================================= */
+function adminTab(tab, btn){
+  ['dashboard','addProduct','manageProducts','orders'].forEach(t=>{
+    document.getElementById('tab-'+t).style.display='none';
+  });
+  document.getElementById('tab-'+tab).style.display='block';
+  document.querySelectorAll('.sdbtn').forEach(b=>b.classList.remove('on'));
+  btn?.classList.add('on');
+  if(tab==='manageProducts') renderAdminProducts();
+  if(tab==='orders') renderAdminOrders();
+  if(tab==='dashboard') refreshDashboard();
+}
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+function inr(n){return '₹'+Number(n).toLocaleString('en-IN');}
+function pct(p,d){return p>d?Math.round((p-d)/p*100):0;}
+function uid(){return 'p'+Date.now()+Math.random().toString(36).substr(2,4);}
+function saveProds(){localStorage.setItem('cc-prods',JSON.stringify(PRODS));}
+
+/* =========================================================
+   CATEGORIES
+   ========================================================= */
+const CAT_ICONS = {'Acrylic Box':'📦','Display Stand':'🏪','Photo Frame':'🖼','Sign Board':'🪧','Trophy':'🏆','Custom':'✏️'};
+
+function renderCats(){
+  const cats = [...new Set(PRODS.map(p=>p.cat))];
+  document.getElementById('catsRow').innerHTML =
+    `<div class="cat ${!aCat?'on':''}" onclick="showAllProds()"><span class="ci">🔲</span><span class="cn">All</span><span class="cc">${PRODS.length}</span></div>`+
+    cats.map(c=>`<div class="cat ${aCat===c?'on':''}" onclick="filterCat('${c}')">
+      <span class="ci">${CAT_ICONS[c]||'📦'}</span><span class="cn">${c}</span>
+      <span class="cc">${PRODS.filter(p=>p.cat===c).length}</span>
+    </div>`).join('');
+}
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+function renderGrid(list, id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  if(!list.length){
+    el.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="ei">🔍</div><h3>No products found</h3><p>Try a different search or category.</p></div>';
+    return;
+  }
+  el.innerHTML = list.map(p=>{
+    const o = pct(p.mrp||p.price, p.price);
+    const liked = wlist.includes(p.id);
+    return `<div class="pcard">
+      <div class="pcard-img-wrap">
+        <img class="pcard-img" src="${p.img||''}" alt="${p.name}" onerror="this.parentElement.innerHTML='<div style=height:200px;display:flex;align-items:center;justify-content:center;font-size:56px>🔲</div>'">
+        ${p.featured?'<span class="bfeat">⭐ Featured</span>':''}
+        ${o>0?`<span class="boff">${o}% off</span>`:''}
+        <button class="wbtn ${liked?'on':''}" onclick="toggleWish('${p.id}',this)">${liked?'❤':'♡'}</button>
+      </div>
+      <div class="pbody">
+        <span class="pcat-tag">${p.cat}</span>
+        <div class="pname">${p.name}</div>
+        ${p.sizes&&p.sizes.length?`<div class="psize">📐 ${p.sizes.slice(0,2).join(' · ')}${p.sizes.length>2?' +more':''}</div>`:(p.customAvail?'<div class="psize">📐 Custom sizes available</div>':'')}
+        <div class="prat"><span class="sbox">★ ${p.rat||'New'}</span><span class="rcnt2">${p.rev?p.rev.toLocaleString('en-IN')+' ratings':''}</span></div>
+        <div class="ppr">
+          <span class="pfin">${inr(p.price)}</span>
+          ${p.mrp&&p.mrp>p.price?`<span class="por">${inr(p.mrp)}</span><span class="psave">Save ${inr(p.mrp-p.price)}</span>`:''}
+        </div>
+        <div class="pacts">
+          <button class="acart" onclick="addCart('${p.id}')">🛒 Add to Cart</button>
+          <button class="aview" onclick="buyNow('${p.id}')">⚡ Buy Now</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterCat(cat){
+  aCat=cat;
+  const list=cat?PRODS.filter(p=>p.cat===cat):PRODS;
+  showPage('products');
+  document.getElementById('pPageTitle').innerHTML=cat?`${CAT_ICONS[cat]||''} ${cat} <span>Products</span>`:`All <span>Products</span>`;
+  renderGrid(list,'pGrid');
+  document.getElementById('pCnt').textContent=list.length+' products';
+  renderCats();
+}
+
+function showAllProds(){filterCat('');}
+
+function applySort(val,gid){
+  const src=aCat?PRODS.filter(p=>p.cat===aCat):[...PRODS];
+  let s=[...src];
+  if(val==='plo') s.sort((a,b)=>a.price-b.price);
+  if(val==='phi') s.sort((a,b)=>b.price-a.price);
+  if(val==='rat') s.sort((a,b)=>(b.rat||0)-(a.rat||0));
+  if(val==='new') s.sort((a,b)=>(b.added||0)-(a.added||0));
+  renderGrid(s,gid);
+}
+
+function liveSearch(q){
+  if(!q.trim()){renderGrid(PRODS.filter(p=>p.featured),'hGrid');return;}
+  const ql=q.toLowerCase();
+  const res=PRODS.filter(p=>
+    p.name.toLowerCase().includes(ql)||
+    p.cat.toLowerCase().includes(ql)||
+    (p.tags||[]).some(t=>t.toLowerCase().includes(ql))||
+    (p.uses||'').toLowerCase().includes(ql)
+  );
+  showPage('products');
+  renderGrid(res,'pGrid');
+  document.getElementById('pPageTitle').innerHTML=`Results for "<span>${q}</span>"`;
+  document.getElementById('pCnt').textContent=res.length+' found';
+}
+function doSearch(){liveSearch(document.getElementById('srchInp').value);}
+
+/* =========================================================
+   PRODUCT DETAIL
+   ========================================================= */
+function openDetail(id){
+  const p=PRODS.find(x=>x.id===id);
+  if(!p)return;
+  const o=pct(p.mrp||p.price,p.price);
+  document.getElementById('detBread').innerHTML=`<span onclick="goHome()">Home</span> › <span onclick="filterCat('${p.cat}')">${p.cat}</span> › ${p.name}`;
+
+  const specRows = [
+    ['Material', p.material||'—'],
+    ['Thickness', p.thick||'—'],
+    ['Finish', p.finish||'—'],
+    ['Lead Time', p.lead||'—'],
+    ['Min. Order Qty', p.moq?p.moq+' unit(s)':'1'],
+    ['Custom Size', p.customAvail?'✔ Available on request':'✘ Not available'],
+    ['Use Cases', p.uses||'—'],
+    ['Stock', p.stock+' units'],
+  ].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('');
+
+  document.getElementById('detContent').innerHTML=`
+    <div class="det-img-box">
+      <img class="det-img" src="${p.img||''}" alt="${p.name}" onerror="this.parentElement.innerHTML='<div style=font-size:80px;padding:40px>🔲</div>'">
+    </div>
+    <div class="det-info">
+      <span class="det-cattag">${CAT_ICONS[p.cat]||''} ${p.cat}</span>
+      <h1 class="det-name">${p.name}</h1>
+      <div class="det-rat">
+        ${p.rat?`<span class="sbox">★ ${p.rat}</span><span style="font-size:13px;color:var(--text3);margin-left:5px">${(p.rev||0).toLocaleString('en-IN')} ratings</span>`:'<span style="font-size:13px;color:var(--text3)">No ratings yet</span>'}
+      </div>
+      <div class="det-mrp">M.R.P.: ${p.mrp&&p.mrp>p.price?`<span style="text-decoration:line-through">${inr(p.mrp)}</span>`:inr(p.price)}</div>
+      <div class="det-fin">${inr(p.price)}</div>
+      ${o>0?`<div class="det-sav">You save: ${inr((p.mrp||p.price)-p.price)} (${o}% off)</div>`:'<div style="height:14px"></div>'}
+      ${p.sizes&&p.sizes.length?`
+      <div style="background:var(--teal-lt);border:1px solid rgba(8,145,178,.2);border-radius:8px;padding:12px 14px;margin-bottom:14px;font-size:13px">
+        <strong style="display:block;margin-bottom:7px;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--teal-dk)">📐 Available Sizes</strong>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">${p.sizes.map(s=>`<span style="background:#fff;border:1px solid rgba(8,145,178,.3);padding:4px 12px;border-radius:50px;font-weight:600;font-size:12px;color:var(--navy)">${s}</span>`).join('')}</div>
+        ${p.customAvail?'<div style="margin-top:7px;font-size:12px;color:var(--teal-dk)">✔ Custom sizes available — contact us</div>':''}
+      </div>`:''}
+      <div class="det-btns">
+        <button class="dbt buy" onclick="buyNow('${p.id}')">Buy Now</button>
+        <button class="dbt cart2" onclick="addCart('${p.id}')">Add to Cart</button>
+        <button class="dbt wish2" onclick="toggleWish('${p.id}')">♡ Wishlist</button>
+      </div>
+      <div class="det-desc-box">
+        <h4>Product Description</h4>
+        <p>${p.desc}</p>
+      </div>
+      <div class="det-specs">
+        <h4>Specifications</h4>
+        <table class="spectable">${specRows}</table>
+      </div>
+    </div>`;
+  showPage('detail');
+}
+
+/* =========================================================
+   CART
+   ========================================================= */
+function addCart(id){
+  const p=PRODS.find(x=>x.id===id);
+  if(!p)return;
+  const ex=cart.find(i=>i.id===id);
+  if(ex)ex.qty++;
+  else cart.push({...p,qty:1});
+  localStorage.setItem('cc-cart',JSON.stringify(cart));
+  updateBadges();
+  toast('Added to cart: '+p.name,'ok');
+}
+function buyNow(id){addCart(id);showPage('cart');}
+function rmCart(id){cart=cart.filter(i=>i.id!==id);localStorage.setItem('cc-cart',JSON.stringify(cart));updateBadges();renderCart();}
+function chQty(id,d){const it=cart.find(i=>i.id===id);if(!it)return;it.qty=Math.max(1,it.qty+d);localStorage.setItem('cc-cart',JSON.stringify(cart));renderCart();}
+
+function renderCart(){
+  const el=document.getElementById('cartContent');
+  if(!cart.length){
+    el.innerHTML='<div class="cbox"><div style="padding:40px;text-align:center"><div style="font-size:52px;margin-bottom:14px">🛒</div><h3 style="font-size:17px;font-weight:700;margin-bottom:7px">Your cart is empty</h3><p style="color:var(--text3);margin-bottom:18px">Browse our acrylic products and add to cart</p><button class="btn-p" onclick="goHome()">Continue Shopping</button></div></div>';
+    ['sItems','sSub','sDis','sTot'].forEach(i=>{const e=document.getElementById(i);if(e)e.textContent=i==='sItems'?'0':'₹0';});
+    return;
+  }
+  const items=cart.reduce((s,i)=>s+i.qty,0);
+  el.innerHTML=`<div class="cbox">
+    <div class="cbox-hd"><span>Shopping Cart</span><span style="font-size:13px;color:var(--text3);font-weight:400">${items} item(s)</span></div>
+    ${cart.map(it=>`<div class="citem">
+      <div class="cimg" style="display:flex;align-items:center;justify-content:center">
+        <img src="${it.img||''}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.innerHTML='<span style=font-size:32px>🔲</span>'">
+      </div>
+      <div class="cinf">
+        <div class="cname">${it.name}</div>
+        <div class="ccat">${it.cat}</div>
+        <div class="cprice">${inr(it.price)}${it.mrp&&it.mrp>it.price?`<span class="corig">${inr(it.mrp)}</span>`:''}</div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <div class="qrow">
+            <button class="qbtn" onclick="chQty('${it.id}',-1)">−</button>
+            <div class="qn">${it.qty}</div>
+            <button class="qbtn" onclick="chQty('${it.id}',1)">+</button>
+          </div>
+          <button class="delbtn" onclick="rmCart('${it.id}')">Delete</button>
+        </div>
+      </div>
+      <div class="ctot">${inr(it.price*it.qty)}</div>
+    </div>`).join('')}
+  </div>`;
+  const orig=cart.reduce((s,i)=>s+(i.mrp||i.price)*i.qty,0);
+  const discT=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  document.getElementById('sItems').textContent=items;
+  document.getElementById('sSub').textContent=inr(orig);
+  document.getElementById('sDis').textContent='-'+inr(orig-discT);
+  document.getElementById('sTot').textContent=inr(discT);
+}
+
+function placeOrder(){
+  if(!me){toast('Please sign in to continue.','err');showPage('auth');return;}
+  if(!cart.length){toast('Your cart is empty.','err');return;}
+  const total=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  const ord={id:'#'+Math.random().toString(36).substr(2,8).toUpperCase(),items:[...cart],total,date:new Date().toLocaleDateString('en-IN'),status:'Confirmed',user:me.name};
+  orders.unshift(ord);
+  localStorage.setItem('cc-ords',JSON.stringify(orders));
+  cart=[];
+  localStorage.setItem('cc-cart',JSON.stringify(cart));
+  updateBadges();
+  document.getElementById('cartContent').innerHTML=`<div class="ordok"><span class="ck">✅</span>
+    <h2 style="font-size:20px;font-weight:700;margin-bottom:7px">Order Placed Successfully!</h2>
+    <p style="color:var(--text3);margin-bottom:5px">Order ID: <strong>${ord.id}</strong></p>
+    <p style="color:var(--text3);margin-bottom:5px">Total: <strong>${inr(total)}</strong></p>
+    <p style="color:var(--text3);margin-bottom:20px">Our team will contact you to confirm delivery details.</p>
+    <button class="btn-p" onclick="goHome()">Continue Shopping</button></div>`;
+  ['sItems','sSub','sDis','sTot'].forEach(i=>{const e=document.getElementById(i);if(e)e.textContent=i==='sItems'?'0':'₹0';});
+  toast('Order '+ord.id+' placed!','ok');
+}
+
+/* =========================================================
+   WISHLIST
+   ========================================================= */
+function toggleWish(id,btnEl){
+  const p=PRODS.find(x=>x.id===id);
+  if(wlist.includes(id)){wlist=wlist.filter(i=>i!==id);toast('Removed from Wishlist.');if(btnEl){btnEl.textContent='♡';btnEl.classList.remove('on');}}
+  else{wlist.push(id);toast('Saved: '+(p?.name||''),'ok');if(btnEl){btnEl.textContent='❤';btnEl.classList.add('on');}}
+  localStorage.setItem('cc-wish',JSON.stringify(wlist));
+  updateBadges();
+}
+function renderWishlist(){
+  const list=PRODS.filter(p=>wlist.includes(p.id));
+  if(!list.length){document.getElementById('wGrid').innerHTML='<div class="empty" style="grid-column:1/-1"><div class="ei">♡</div><h3>Wishlist is empty</h3><p>Heart the products you love!</p><button class="btn-p" onclick="goHome()">Browse Products</button></div>';return;}
+  renderGrid(list,'wGrid');
+}
+
+/* =========================================================
+   AUTH
+   ========================================================= */
+function doLogin(){
+  const e=document.getElementById('lemail').value.trim();
+  const p=document.getElementById('lpass').value.trim();
+  const u=USERS.find(x=>x.email===e&&x.pass===p);
+  if(!u){toast('Incorrect email or password.','err');return;}
+  me={name:u.name,email:u.email,role:u.role};
+  localStorage.setItem('cc-me',JSON.stringify(me));
+  syncAuth();showPage('home');
+  toast('Welcome back, '+u.name+'!','ok');
+}
+function doRegister(){
+  const n=document.getElementById('rname').value.trim();
+  const e=document.getElementById('remail').value.trim();
+  const p=document.getElementById('rpass').value.trim();
+  if(!n||!e||!p){toast('Please fill all fields.','err');return;}
+  if(p.length<6){toast('Password must be at least 6 characters.','err');return;}
+  me={name:n,email:e,role:'user'};
+  localStorage.setItem('cc-me',JSON.stringify(me));
+  syncAuth();showPage('home');
+  toast('Welcome, '+n+'!','ok');
+}
+function doLogout(){me=null;localStorage.removeItem('cc-me');syncAuth();goHome();toast('Signed out.');}
+function toggleAuth(){
+  const l=document.getElementById('loginPanel'),r=document.getElementById('regPanel');
+  l.style.display=l.style.display==='none'?'block':'none';
+  r.style.display=r.style.display==='none'?'block':'none';
+}
+function syncAuth(){
+  const btn=document.getElementById('authBtn');
+  const an=document.getElementById('adminNav');
+  if(me){
+    btn.innerHTML=`<span class="t">Hello, ${me.name.split(' ')[0]}</span><span class="b">Sign Out</span>`;
+    btn.onclick=doLogout;
+    an.style.display=me.role==='admin'?'inline-block':'none';
+  } else {
+    btn.innerHTML=`<span class="t">Hello, Sign in</span><span class="b">Account</span>`;
+    btn.onclick=()=>showPage('auth');
+    an.style.display='none';
+  }
+}
+
+/* =========================================================
+   PRODUCT FORM — SIZES
+   ========================================================= */
+function addSize(){
+  const w=document.getElementById('sizeW').value.trim();
+  const h=document.getElementById('sizeH').value.trim();
+  const d=document.getElementById('sizeD').value.trim();
+  if(!w||!h){toast('Enter at least Width and Height.','err');return;}
+  const label=d?`${w}×${h}×${d} cm`:`${w}×${h} cm`;
+  if(sizes.includes(label)){toast('Size already added.','err');return;}
+  sizes.push(label);
+  renderSizes();
+  document.getElementById('sizeW').value='';
+  document.getElementById('sizeH').value='';
+  document.getElementById('sizeD').value='';
+}
+function rmSize(s){sizes=sizes.filter(x=>x!==s);renderSizes();}
+function renderSizes(){
+  document.getElementById('sizesDisplay').innerHTML=sizes.map(s=>
+    `<span class="size-chip">${s}<button onclick="rmSize('${s}')" title="Remove">×</button></span>`
+  ).join('');
+}
+
+function previewImg(url){
+  const box=document.getElementById('imgPreview');
+  if(!url){box.innerHTML='🔲';return;}
+  box.innerHTML=`<img src="${url}" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.parentElement.innerHTML='❌'">`;
+}
+
+/* =========================================================
+   SAVE PRODUCT
+   ========================================================= */
+function saveProduct(){
+  const name=document.getElementById('f-name').value.trim();
+  const cat=document.getElementById('f-cat').value;
+  const desc=document.getElementById('f-desc').value.trim();
+  const mrp=parseFloat(document.getElementById('f-mrp').value)||0;
+  const price=parseFloat(document.getElementById('f-price').value)||0;
+  const stock=parseInt(document.getElementById('f-stock').value)||0;
+
+  if(!name||!cat||!desc){toast('Name, Category, and Description are required.','err');return;}
+  if(!price){toast('Please enter a Sale Price.','err');return;}
+  if(price>mrp&&mrp>0){toast('Sale price cannot be more than MRP.','err');return;}
+
+  const customSizeText=document.getElementById('f-customSize').value.trim();
+  const allSizes=[...sizes];
+  if(customSizeText) allSizes.push(...customSizeText.split(',').map(s=>s.trim()).filter(Boolean));
+
+  const tags=document.getElementById('f-tags').value.split(',').map(t=>t.trim().toLowerCase()).filter(Boolean);
+
+  const prod={
+    id: editId||uid(),
+    name, cat, desc,
+    material:document.getElementById('f-material').value,
+    thick:document.getElementById('f-thick').value,
+    sizes:allSizes,
+    finish:document.getElementById('f-finish').value,
+    lead:document.getElementById('f-lead').value,
+    uses:document.getElementById('f-uses').value.trim(),
+    moq:parseInt(document.getElementById('f-moq').value)||1,
+    mrp:mrp||price,
+    price, stock, tags,
+    img:document.getElementById('f-img').value.trim(),
+    featured:document.getElementById('f-featured').checked,
+    customAvail:document.getElementById('f-custom').checked,
+    rat:null, rev:0,
+    added:Date.now()
+  };
+
+  if(editId){
+    const idx=PRODS.findIndex(p=>p.id===editId);
+    if(idx>-1){PRODS[idx]={...PRODS[idx],...prod};toast('Product updated!','ok');}
+    editId=null;
+  } else {
+    PRODS.unshift(prod);
+    toast('Product published successfully!','ok');
+  }
+  saveProds();
+  clearForm();
+  renderCats();
+  renderGrid(PRODS.filter(p=>p.featured),'hGrid');
+  document.getElementById('hCnt').textContent=PRODS.filter(p=>p.featured).length+' products';
+  adminTab('manageProducts',document.querySelectorAll('.sdbtn')[2]);
+}
+
+function clearForm(){
+  ['f-name','f-desc','f-mrp','f-price','f-stock','f-moq','f-img','f-customSize','f-uses','f-tags'].forEach(id=>{
+    const el=document.getElementById(id);if(el)el.value='';
+  });
+  ['f-cat','f-material','f-thick','f-finish','f-lead'].forEach(id=>{
+    const el=document.getElementById(id);if(el)el.selectedIndex=0;
+  });
+  document.getElementById('f-featured').checked=false;
+  document.getElementById('f-custom').checked=true;
+  sizes=[];renderSizes();
+  document.getElementById('imgPreview').innerHTML='🔲';
+  editId=null;
+  document.querySelector('.pform-hd h2').textContent='Product Listing Form';
+}
+
+function editProduct(id){
+  const p=PRODS.find(x=>x.id===id);
+  if(!p)return;
+  editId=id;
+  document.getElementById('f-name').value=p.name||'';
+  document.getElementById('f-cat').value=p.cat||'';
+  document.getElementById('f-desc').value=p.desc||'';
+  document.getElementById('f-material').value=p.material||'';
+  document.getElementById('f-thick').value=p.thick||'';
+  document.getElementById('f-finish').value=p.finish||'';
+  document.getElementById('f-lead').value=p.lead||'';
+  document.getElementById('f-uses').value=p.uses||'';
+  document.getElementById('f-mrp').value=p.mrp||'';
+  document.getElementById('f-price').value=p.price||'';
+  document.getElementById('f-stock').value=p.stock||'';
+  document.getElementById('f-moq').value=p.moq||1;
+  document.getElementById('f-img').value=p.img||'';
+  document.getElementById('f-tags').value=(p.tags||[]).join(', ');
+  document.getElementById('f-featured').checked=!!p.featured;
+  document.getElementById('f-custom').checked=!!p.customAvail;
+  sizes=[...(p.sizes||[])];renderSizes();
+  previewImg(p.img||'');
+  document.querySelector('.pform-hd h2').textContent='Edit Product';
+  adminTab('addProduct',document.querySelectorAll('.sdbtn')[1]);
+  window.scrollTo({top:0});
+}
+
+function deleteProduct(id){
+  if(!confirm('Delete this product? This cannot be undone.'))return;
+  PRODS=PRODS.filter(p=>p.id!==id);
+  saveProds();renderCats();renderAdminProducts();
+  renderGrid(PRODS.filter(p=>p.featured),'hGrid');
+  toast('Product deleted.','err');
+}
+
+/* =========================================================
+   ADMIN RENDERS
+   ========================================================= */
+function renderAdminProducts(){
+  const tbl=document.getElementById('adminTbl');
+  if(!PRODS.length){tbl.innerHTML='<tr><td colspan="8" style="padding:28px;text-align:center;color:var(--text3)">No products yet. Add your first product!</td></tr>';return;}
+  tbl.innerHTML=`<thead><tr>
+    <th>#</th><th>Product</th><th>Category</th><th>Sizes</th>
+    <th>MRP</th><th>Sale Price</th><th>Stock</th><th>Actions</th>
+  </tr></thead><tbody>`+
+  PRODS.map((p,i)=>`<tr>
+    <td>${i+1}</td>
+    <td>
+      <div style="font-weight:600;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.name}</div>
+      ${p.featured?'<span style="font-size:10px;color:var(--accent);font-weight:700">⭐ Featured</span>':''}
+    </td>
+    <td>${p.cat}</td>
+    <td style="font-size:12px;color:var(--text3);max-width:120px">${p.sizes&&p.sizes.length?p.sizes.slice(0,2).join(', ')+(p.sizes.length>2?'…':''):(p.customAvail?'Custom':'—')}</td>
+    <td>${inr(p.mrp||p.price)}</td>
+    <td><strong>${inr(p.price)}</strong></td>
+    <td><span class="${p.stock>20?'stk-ok':'stk-lo'}">${p.stock}</span></td>
+    <td>
+      <button class="tbl-action" onclick="editProduct('${p.id}')">✏ Edit</button>
+      <button class="tbl-action del" onclick="deleteProduct('${p.id}')">🗑</button>
+    </td>
+  </tr>`).join('')+'</tbody>';
+}
+
+function renderAdminOrders(){
+  const el=document.getElementById('adminOrd');
+  if(!orders.length){el.innerHTML='<p style="padding:24px;text-align:center;color:var(--text3)">No orders yet.</p>';return;}
+  el.innerHTML=`<table class="atbl"><thead><tr>
+    <th>Order ID</th><th>Customer</th><th>Items</th><th>Date</th><th>Total</th><th>Status</th>
+  </tr></thead><tbody>`+
+  orders.map(o=>`<tr>
+    <td style="font-weight:700;color:var(--teal)">${o.id}</td>
+    <td>${o.user}</td>
+    <td>${o.items.length} item(s)</td>
+    <td>${o.date}</td>
+    <td><strong>${inr(o.total)}</strong></td>
+    <td><span class="stk-ok">${o.status}</span></td>
+  </tr>`).join('')+'</tbody></table>';
+}
+
+function refreshDashboard(){
+  document.getElementById('ds1').textContent=PRODS.length;
+  document.getElementById('ds2').textContent=orders.length;
+  document.getElementById('ds3').textContent=inr(orders.reduce((s,o)=>s+o.total,0));
+  document.getElementById('ds4').textContent=wlist.length;
+}
+
+/* =========================================================
+   UI HELPERS
+   ========================================================= */
+function updateBadges(){
+  document.getElementById('cBadge').textContent=cart.reduce((s,i)=>s+(i.qty||1),0);
+  document.getElementById('wCnt').textContent=wlist.length;
+}
+
+function toast(msg,type=''){
+  const c=document.getElementById('toasts');
+  const el=document.createElement('div');
+  el.className='toast '+(type||'');
+  el.textContent=msg;
+  c.appendChild(el);
+  setTimeout(()=>{el.style.opacity='0';el.style.transform='translateX(110%)';el.style.transition='all .3s';setTimeout(()=>el.remove(),320);},3000);
+}
+</script>
+</body>
+</html>
